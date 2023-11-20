@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: algo-explore
+  labels:
+    app: algo-explore
+spec:
+  selector:
+    matchLabels:
+      app: algo-explore
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: algo-explore
+    spec:
+      containers:
+      - name: algo-explore
+        image: sulatnijag/algo:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: 256Mi
+            cpu: "250m"
+          requests:
+            memory: 128Mi
+            cpu: "80m"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: algo-explore
+spec:
+  selector:
+    app: algo-explore
+  type: LoadBalancer #Type of the Kubernetes Service
+  ports:
+  - protocol: TCP
+    port: 80 #Service port
+    targetPort: 80 #The port for the React.js application container
