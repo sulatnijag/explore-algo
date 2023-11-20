@@ -9,7 +9,7 @@ RUN pip install lightstreamer-client-lib
 
 COPY src/. .
 
-ENTRYPOINT ["tail"] 
-CMD ["-f","/dev/null"]
+#ENTRYPOINT ["tail"] 
+#CMD ["-f","/dev/null"]
 
-#CMD [ "python", "./stock_list_demo.py" ]
+CMD [ "python", "./usr/src/app/stock_list_demo.py" ]
