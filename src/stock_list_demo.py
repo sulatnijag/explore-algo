@@ -43,7 +43,7 @@ subscription.addListener(SubListener())
 # Registering the Subscription
 lightstreamer_client.subscribe(subscription)
 
-wait_for_input()
+# wait_for_input()
 
 # Unsubscribing from Lightstreamer by using the subscription as key
 lightstreamer_client.unsubscribe(subscription)
