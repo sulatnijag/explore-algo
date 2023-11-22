@@ -12,4 +12,4 @@ COPY src/. .
 #ENTRYPOINT ["tail"] 
 #CMD ["-f","/dev/null"]
 
-CMD [ "python", "stock_list_demo.py" ]
+CMD [ "python", "main.py" ]
