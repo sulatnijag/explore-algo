@@ -8,8 +8,9 @@ WORKDIR /usr/src/app
 RUN pip install lightstreamer-client-lib
 
 COPY src/. .
+ENV PYTHONUNBUFFERED=1
 
-ENTRYPOINT ["tail"] 
-CMD ["-f","/dev/null"]
+#ENTRYPOINT ["tail"] 
+#CMD ["-f","/dev/null"]
 
-#CMD [ "python", "main.py" ]
+CMD [ "python3", "-u", "main.py" ]
