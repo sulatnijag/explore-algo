@@ -17,6 +17,7 @@ spec:
       containers:
       - name: algo-explore
         image: sulatnijag/algo:latest
+        tty: true
         ports:
         - containerPort: 80
         resources:
