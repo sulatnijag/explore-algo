@@ -13,4 +13,4 @@ ENV PYTHONUNBUFFERED=1
 #ENTRYPOINT ["tail"] 
 #CMD ["-f","/dev/null"]
 
-CMD [ "python3", "-u", "main.py" ]
+CMD [ "python3", "-u", "stock_list_demo.py" ]
